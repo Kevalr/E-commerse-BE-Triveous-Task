@@ -17,9 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 const port = process.env.PORT || 8000;
 
 // Server Test Route
-app.get('/ready',(req, res) => {
-  res.send('Welcome to Express & TypeScript Server');
-});
+app.get("/", (req, res) => { res.send("Express on Vercel"); });
 
 app.use(router);
 
