@@ -13,7 +13,7 @@ const pool = new Pool({
   idleTimeoutMillis: 3000,
 });
 
-const execQuery = async (queryText, queryParams) => {
+const execQuery = async (queryText, queryParams = []) => {
     let client;
     client = await pool.connect();
     try {
