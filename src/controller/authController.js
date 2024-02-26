@@ -50,8 +50,8 @@ const signIn = async (req, res) => {
     }
 
     const token = jwt.sign(
-      { id: result.rows[0].id },
-      process.env.JWT_SECRET || "khezghaebzhzop",
+      { userId: result.rows[0].id },
+      process.env.JWT_SECRET || "12345678",
       { expiresIn: "1d" }
     );
     res.status(200).json({
