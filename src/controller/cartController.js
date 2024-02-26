@@ -88,6 +88,7 @@ const updateCartProduct = async (req, res) => {
     }
 
     await updateProduct(userId, productId, quantity);
+    return res.status(200).json({ message: "Product Quantity Updated" });
   } catch (error) {
     console.error("Error updating cart:", error);
     res.status(500).json({ message: "Internal server error" });
