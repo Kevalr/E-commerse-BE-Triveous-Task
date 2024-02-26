@@ -19,7 +19,7 @@ const updateProduct = async (userID, productID, quantity) => {
 };
 
 const removeProduct = async (userID, productID) => {
-  const queryText = `DELETE cart_item WHERE user_id = $1 and product_id = $2`;
+  const queryText = `DELETE FROM cart_item WHERE user_id = $1 and product_id = $2`;
   const queryParams = [userID, productID];
   return await execQuery(queryText, queryParams);
 };
